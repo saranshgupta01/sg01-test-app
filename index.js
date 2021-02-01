@@ -4,7 +4,7 @@ var bodyParser = require('body-parser');
 var gplay = require('google-play-scraper');
 ////////////////////////////////////////////
 let app = express();
-var port = 3000;
+var port = process.env.PORT || 3002;
 app.use(function (req, res, next) {
 	res.setHeader('Access-Control-Allow-Origin', '*');
 	res.setHeader('Access-Control-Allow-Methods', '*');
