@@ -28,9 +28,11 @@ app.get('/', function (req, res, next) {
 app.post('/setDriverLocation', async function (req, res, next) {
 	var params = req.body;
 	console.log("Get Driver Location----",params )
+	res.jsonp({ "status": 1, "message": 'server running...',data:params });
 });
 
 
 app.get('/getTest', function (req, res, next) {
 	console.log("Test Working ")
+	res.jsonp({ "status": 1, "message": 'Success...' });
 });
